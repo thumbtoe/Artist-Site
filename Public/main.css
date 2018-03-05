@@ -1,0 +1,531 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.display {
+  display: block; }
+
+.hide {
+  display: none; }
+
+a:link {
+  color: inherit; }
+a:visited {
+  color: inherit; }
+
+body {
+  background-color: #141415;
+  color: #EFEFEF; }
+  body header {
+    position: fixed;
+    width: 100%;
+    color: #EFEFEF;
+    z-index: 1000; }
+    body header .menu-content {
+      display: none; }
+    body header .menu-mini {
+      display: none; }
+    body header menu {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      width: 900px;
+      height: 50px;
+      margin: 0 auto; }
+      body header menu section {
+        display: flex;
+        align-items: center; }
+        body header menu section h1 {
+          font-size: 22px;
+          align-items: center; }
+        body header menu section ul {
+          display: flex;
+          flex-flow: row;
+          align-items: center; }
+          body header menu section ul li {
+            width: 90px;
+            list-style: none;
+            text-align: center; }
+            body header menu section ul li:hover {
+              color: #ec0928;
+              font-size: 1.3em; }
+  body main .title {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 10px 10px 0;
+    margin-bottom: 0.5em; }
+  body main .jumbotron {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; }
+    body main .jumbotron figure {
+      width: 400%;
+      position: relative;
+      animation: 20s slider infinite; }
+      body main .jumbotron figure div {
+        width: 25%;
+        float: left; }
+        body main .jumbotron figure div img {
+          width: 100%; }
+@keyframes slider {
+  0% {
+    left: 0%; }
+  25% {
+    left: 0%; }
+  29% {
+    left: -100%; }
+  50% {
+    left: -100%; }
+  54% {
+    left: -200%; }
+  75% {
+    left: -200%; }
+  79% {
+    left: -300%; }
+  100% {
+    left: -300%; } }
+  body main .content {
+    display: flex; }
+    body main .content .left {
+      width: 48%;
+      margin: 10px 10% 10px 5%; }
+      body main .content .left .news .info {
+        height: 200px;
+        border: 1px solid #0f0f11;
+        margin-bottom: 40px; }
+        body main .content .left .news .info .top {
+          display: flex; }
+          body main .content .left .news .info .top img {
+            height: 198px; }
+          body main .content .left .news .info .top .details {
+            padding: 6px; }
+            body main .content .left .news .info .top .details .like {
+              height: 20px;
+              margin-top: 6px;
+              text-align: right; }
+            body main .content .left .news .info .top .details h4 {
+              height: 16px;
+              font-size: 10px; }
+            body main .content .left .news .info .top .details h3 {
+              height: 50px; }
+            body main .content .left .news .info .top .details p {
+              font-weight: 100; }
+        body main .content .left .news .info .bottom {
+          display: flex;
+          justify-content: space-between;
+          height: 20px;
+          padding: 3px; }
+    body main .content .right {
+      width: 20%;
+      margin: 10px 10% 10px 5%; }
+      body main .content .right .follow-us p {
+        display: inline-block;
+        font-size: 18px;
+        margin: 5px; }
+        body main .content .right .follow-us p:hover {
+          color: #ec0928;
+          font-size: 24px; }
+      body main .content .right .getUpdates form input {
+        height: 40px;
+        width: 90%;
+        margin-left: 20px 10px 10px 0;
+        background-color: #0f0f11;
+        color: #ccc;
+        border: none;
+        font-size: 16px;
+        padding-left: 5px; }
+  body main .img-gallery {
+    width: 1140px;
+    max-width: 100%;
+    padding-top: 60px;
+    margin: 20px auto;
+    text-align: center; }
+    body main .img-gallery div {
+      width: 30%;
+      min-width: 350px;
+      max-width: 380px;
+      height: 280px;
+      display: inline-block;
+      overflow: hidden;
+      margin: 10px;
+      padding: 0 auto;
+      position: relative; }
+      body main .img-gallery div img {
+        height: 100%;
+        margin: 0 auto;
+        position: relative; }
+  body main .albums {
+    width: 1140px;
+    max-width: 100%;
+    padding-top: 60px;
+    margin: 20px auto;
+    text-align: center; }
+    body main .albums .covers {
+      width: 314px;
+      height: 314px;
+      display: inline-block;
+      overflow: hidden;
+      margin: 10px;
+      padding: 0 auto;
+      position: relative; }
+      body main .albums .covers img {
+        height: 100%;
+        margin: 0 auto;
+        position: relative; }
+    body main .albums .album-info {
+      height: 400px;
+      width: 800px;
+      max-width: 100%;
+      display: none;
+      margin: 20px auto; }
+      body main .albums .album-info div:first-of-type {
+        width: 350px;
+        padding: 15px 10px;
+        display: inline-block;
+        text-align: center; }
+      body main .albums .album-info div:nth-of-type(2n) {
+        height: 316px;
+        width: 400px;
+        max-width: 100%;
+        padding: 15px 10px;
+        display: inline-block;
+        list-style: circle;
+        vertical-align: top; }
+        body main .albums .album-info div:nth-of-type(2n) h2 {
+          margin: 10px auto; }
+        body main .albums .album-info div:nth-of-type(2n) li {
+          margin: 3px auto; }
+  body main .contact-us {
+    width: 600px;
+    margin: 50px auto;
+    padding-top: 56px;
+    text-align: center; }
+    body main .contact-us #contact {
+      margin: 200px auto; }
+    body main .contact-us input {
+      display: block;
+      padding: 4px;
+      margin: 15px auto;
+      height: 35px;
+      width: 250px;
+      max-width: 100%; }
+    body main .contact-us button {
+      height: 35px;
+      width: 90px; }
+  body footer {
+    background-color: #0f0f11;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between; }
+    body footer div p {
+      display: inline-block;
+      font-size: 18px;
+      margin: 5px; }
+
+@media (max-width: 1024px) {
+  body {
+    background-color: #141415;
+    color: #EFEFEF; }
+    body header .menu-content {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 30%;
+      padding: 10px 30px;
+      font-size: 24px;
+      color: #ccc;
+      background-color: #0f0f11;
+      z-index: 10; }
+      body header .menu-content ul {
+        padding-top: 30px; }
+        body header .menu-content ul li {
+          margin-bottom: 20px; }
+          body header .menu-content ul li:hover {
+            color: #ec0928; }
+    body header .menu-mini {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 100%;
+      width: 50px;
+      z-index: 5; }
+      body header .menu-mini:hover .menu-content {
+        display: block; }
+      body header .menu-mini div {
+        height: 3px;
+        width: 35px;
+        margin: 5px auto;
+        background-color: #ccc; }
+    body header menu {
+      display: none; }
+    body main .title {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 10px 10px 0;
+      margin-bottom: 0.5em; }
+    body main .jumbotron {
+      height: auto;
+      width: 100%;
+      overflow: hidden; }
+      body main .jumbotron figure {
+        width: 400%;
+        position: relative;
+        animation: 20s slider infinite; }
+        body main .jumbotron figure div {
+          width: 25%;
+          float: left; }
+          body main .jumbotron figure div img {
+            width: 100%; }
+  @keyframes slider {
+    0% {
+      left: 0%; }
+    25% {
+      left: 0%; }
+    29% {
+      left: -100%; }
+    50% {
+      left: -100%; }
+    54% {
+      left: -200%; }
+    75% {
+      left: -200%; }
+    79% {
+      left: -300%; }
+    100% {
+      left: -300%; } }
+    body main .content {
+      display: flex;
+      flex-flow: column; }
+      body main .content .left {
+        width: 100%;
+        margin: 0;
+        padding: 0 5px; }
+        body main .content .left .news .info {
+          height: 200px;
+          border: 1px solid #0f0f11;
+          margin-bottom: 40px; }
+          body main .content .left .news .info .top {
+            display: flex; }
+            body main .content .left .news .info .top img {
+              height: 198px; }
+            body main .content .left .news .info .top .details {
+              padding: 6px; }
+              body main .content .left .news .info .top .details .like {
+                height: 20px;
+                margin-top: 6px;
+                text-align: right; }
+              body main .content .left .news .info .top .details h4 {
+                height: 16px;
+                font-size: 10px; }
+              body main .content .left .news .info .top .details h3 {
+                height: 50px; }
+              body main .content .left .news .info .top .details p {
+                font-weight: 100; }
+          body main .content .left .news .info .bottom {
+            display: flex;
+            justify-content: space-between;
+            height: 20px;
+            padding: 3px; }
+      body main .content .right {
+        width: 100%;
+        margin: 0;
+        padding: 0 5px; }
+        body main .content .right .follow-us h3 {
+          text-align: center; }
+        body main .content .right .follow-us div {
+          display: flex;
+          justify-content: center; }
+          body main .content .right .follow-us div p {
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            margin: 5px; }
+            body main .content .right .follow-us div p:hover {
+              color: #ec0928;
+              font-size: 24px; }
+        body main .content .right .getUpdates {
+          text-align: center;
+          margin: 40px auto; }
+          body main .content .right .getUpdates form {
+            text-align: center; }
+            body main .content .right .getUpdates form input {
+              height: 40px;
+              width: 50%;
+              margin-left: 20px 10px 10px 0;
+              background-color: #0f0f11;
+              color: #ccc;
+              border: none;
+              font-size: 16px;
+              padding-left: 5px; }
+    body main .img-gallery, body main .albums {
+      padding-top: 56px;
+      text-align: center; }
+    body main .contact-us {
+      width: 600px;
+      margin: 50px auto;
+      padding-top: 56px;
+      text-align: center; }
+      body main .contact-us #contact {
+        margin: 300px auto; }
+    body footer {
+      background-color: #0f0f11;
+      padding: 10px 10%;
+      display: flex;
+      justify-content: space-between; }
+      body footer div p {
+        display: inline-block;
+        font-size: 18px;
+        margin: 5px; } }
+@media (max-width: 414px) {
+  body {
+    background-color: #141415;
+    color: #EFEFEF; }
+    body header .menu-content {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 10px 30px;
+      font-size: 24px;
+      text-align: center;
+      color: #ccc;
+      background-color: #0f0f11;
+      z-index: 10; }
+      body header .menu-content ul {
+        padding-top: 30px; }
+        body header .menu-content ul li {
+          margin-bottom: 20px; }
+          body header .menu-content ul li:hover {
+            color: #ec0928; }
+    body header .menu-mini {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 100%;
+      width: 50px;
+      z-index: 5; }
+      body header .menu-mini:hover .menu-content {
+        display: block; }
+      body header .menu-mini div {
+        height: 3px;
+        width: 35px;
+        margin: 5px auto;
+        background-color: #ccc; }
+    body header menu {
+      display: none; }
+    body main .title {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 10px 10px 0;
+      margin-bottom: 0.5em; }
+    body main .jumbotron {
+      height: auto;
+      width: 100%;
+      overflow: hidden; }
+      body main .jumbotron figure {
+        width: 400%;
+        position: relative;
+        animation: 20s slider infinite; }
+        body main .jumbotron figure div {
+          width: 25%;
+          float: left; }
+          body main .jumbotron figure div img {
+            width: 100%; }
+  @keyframes slider {
+    0% {
+      left: 0%; }
+    25% {
+      left: 0%; }
+    29% {
+      left: -100%; }
+    50% {
+      left: -100%; }
+    54% {
+      left: -200%; }
+    75% {
+      left: -200%; }
+    79% {
+      left: -300%; }
+    100% {
+      left: -300%; } }
+    body main .content {
+      display: flex;
+      flex-flow: column; }
+      body main .content .left {
+        width: 100%;
+        margin: 0;
+        padding: 0 5px; }
+        body main .content .left .news .info {
+          height: auto;
+          border: 1px solid #0f0f11;
+          margin-bottom: 40px; }
+          body main .content .left .news .info .top {
+            display: flex;
+            flex-flow: column; }
+            body main .content .left .news .info .top img {
+              width: 70%;
+              margin: 0 auto; }
+            body main .content .left .news .info .top .details {
+              padding: 6px; }
+              body main .content .left .news .info .top .details .like {
+                height: 20px;
+                margin-top: 6px;
+                text-align: right; }
+              body main .content .left .news .info .top .details h4 {
+                height: 16px;
+                font-size: 10px; }
+              body main .content .left .news .info .top .details h3 {
+                height: 50px; }
+              body main .content .left .news .info .top .details p {
+                font-weight: 100; }
+          body main .content .left .news .info .bottom {
+            display: flex;
+            justify-content: space-between;
+            height: 20px;
+            padding: 3px; }
+      body main .content .right {
+        width: 100%;
+        margin: 0;
+        padding: 0 5px; }
+        body main .content .right .follow-us h3 {
+          text-align: center; }
+        body main .content .right .follow-us div {
+          display: flex;
+          justify-content: center; }
+          body main .content .right .follow-us div p {
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            margin: 5px; }
+            body main .content .right .follow-us div p:hover {
+              color: #ec0928;
+              font-size: 24px; }
+        body main .content .right .getUpdates {
+          text-align: center;
+          margin: 40px auto; }
+          body main .content .right .getUpdates form {
+            text-align: center; }
+            body main .content .right .getUpdates form input {
+              height: 40px;
+              width: 50%;
+              margin-left: 20px 10px 10px 0;
+              background-color: #0f0f11;
+              color: #ccc;
+              border: none;
+              font-size: 16px;
+              padding-left: 5px; }
+    body footer {
+      background-color: #0f0f11;
+      padding: 10px 10%;
+      display: flex;
+      justify-content: space-between; }
+      body footer div p {
+        display: inline-block;
+        font-size: 18px;
+        margin: 5px; } }
+
+/*# sourceMappingURL=main.css.map */
