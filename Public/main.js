@@ -49,12 +49,15 @@ function albumCoverDisplay() {
 }
 
 submit.addEventListener("click", function() {
-  var name = document.querySelector("#name").value;
-  var email = document.querySelector("#email").value;
-  if ((name || email) !== "") {
+  var name = document.forms["contact"]["name"].value;
+  var email = document.forms["contact"]["email"].value;
+  if (name == "" && email == "") {
     alert("Name and Email must be filled out");
+  } else if (name == "") {
+    alert("Name must be filled out");
+  } else if (email == "") {
+    alert("Email must be filled out");
   } else {
-
     alert("Your message has been submitted");
   }
 
