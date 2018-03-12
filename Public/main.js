@@ -21,29 +21,14 @@ albumCoverDisplay();
 function albumCoverDisplay() {
 
   var i = 0;
-  for (i = 0; i < albumCover.length; i++) {
+  for (let i = 0; i < albumCover.length; i++) {
+    console.log(i);
     albumCover[i].addEventListener("click", function() {
-
-      var j = 0;
       for (var j = 0; j < albumCover.length; j++) {
-        albumCover[j].style.display = "inline-block";
+        albumInfo[j].style.display = "none";
       }
-      this.style.display = "none";
-      if (albumCover[0].style.display = "none") {
-        albumInfo[0].style.display = "block";
-      }
-      if (albumCover[1].style.display = "none") {
-        albumInfo[1].style.display = "block";
-      }
-      if (albumCover[2].style.display = "none") {
-        albumInfo[2].style.display = "block";
-      }
-      if (albumCover[3].style.display = "none") {
-        albumInfo[3].style.display = "block";
-      }
-      if (albumCover[4].style.display = "none") {
-        albumInfo[4].style.display = "block";
-      }
+      console.log(i);
+      albumInfo[i].style.display = "block";
     });
   }
 }

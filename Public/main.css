@@ -42,16 +42,32 @@ body {
           font-size: 22px;
           align-items: center; }
         body header menu section ul {
+          position: relative;
           display: flex;
           flex-flow: row;
           align-items: center; }
           body header menu section ul li {
+            position: relative;
             width: 90px;
             list-style: none;
-            text-align: center; }
+            text-align: center;
+            transition: all 0.4s ease-in-out; }
+            body header menu section ul li ul {
+              display: none;
+              height: 0; }
             body header menu section ul li:hover {
               color: #ec0928;
               font-size: 1.3em; }
+              body header menu section ul li:hover ul {
+                position: absolute;
+                display: block;
+                background-color: #0f0f11;
+                height: auto;
+                color: #ccc;
+                font-size: 1rem; }
+                body header menu section ul li:hover ul li:hover {
+                  color: #ec0928;
+                  font-size: 1.3em; }
   body main .title {
     border-bottom: 1px solid #ccc;
     padding: 10px 10px 10px 0;
@@ -169,7 +185,8 @@ body {
       overflow: hidden;
       margin: 10px;
       padding: 0 auto;
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
       body main .albums .covers img {
         height: 100%;
         margin: 0 auto;

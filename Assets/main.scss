@@ -51,18 +51,43 @@ body{
           align-items: center;
         }
         ul{
+          position:relative;
           display: flex;
           flex-flow: row;
           align-items: center;
           li{
+            position: relative;
             width: 90px;
             list-style: none;
             text-align: center;
+            transition: all 0.4s ease-in-out;
+
+            ul{
+              display: none;
+              height: 0;
+              li{
+
+              }
+            }
             &:hover{
               color: $red;
               font-size: 1.3em;
+              ul{
+                position: absolute;
+                display: block;
+                background-color: $greyDark;
+                height: auto;
+                color: $greyLight;
+                font-size: 1rem;
+                li{
+                  &:hover{
+                    color: $red;
+                    font-size: 1.3em;}
+                }
+              }
             }
-          }
+            }
+
         }
       }
     }
@@ -236,6 +261,7 @@ body{
         margin: 10px;;
         padding: 0 auto;
         position: relative;
+        cursor: pointer;
         img{
           height: 100%;
           margin: 0 auto;
